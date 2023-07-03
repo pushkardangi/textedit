@@ -14,6 +14,26 @@ A text editor.
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Google Fonts](https://img.shields.io/badge/google_fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
+## Installation
+
+1. Clone
+
+   ```github
+   git clone https://github.com/pushkardangi/textedit.git
+   ```
+
+2. Install npm packages
+
+   ```npm
+   npm install
+   ```
+
+3. Start development server
+
+   ```npm
+   npm run dev
+   ```
+
 ## Contributions
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -27,4 +47,4 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[<a href="#readme-top">back to top</a>]</p>
