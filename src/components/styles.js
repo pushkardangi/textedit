@@ -4,9 +4,9 @@ const darkStyles = {
   sectionColor: "bg-[#151718]",
   bgColor: "bg-[#0f0f0f]",
 
-  text: "text-lg text-[#cecece]",
+  text: "text-[#cecece]",
 
-  // fnButtonColor: "bg-[#1f2123]",
+  fnButtonColor: "bg-[#212123]",
 };
 
 const lightStyles = {
@@ -15,9 +15,9 @@ const lightStyles = {
   sectionColor: "bg-white",
   bgColor: "bg-[#eeeeee]",
 
-  text: "text-lg text-black",
+  text: "text-black",
 
-  // fnButtonColor: "",
+  fnButtonColor: "bg-[#f7f7f7]",
 };
 
 export { darkStyles, lightStyles };
