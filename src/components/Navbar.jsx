@@ -1,4 +1,4 @@
-import { darkStyles, lightStyles } from "./styles";
+import { darkStyles, lightStyles } from "../constants/styles";
 
 function Navbar (props) {
   

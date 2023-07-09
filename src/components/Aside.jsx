@@ -1,6 +1,6 @@
 import "../fonts/inter.css";
 import { features, dragBtn } from "../constants";
-import { darkStyles, lightStyles } from "./styles";
+import { darkStyles, lightStyles } from "../constants/styles";
 
 function Aside(props) {
 
