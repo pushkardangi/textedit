@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Aside from "./components/Aside";
+import Section from "./components/Section";
 
 import React, { useState } from 'react';
 
@@ -17,6 +18,7 @@ function App() {
         <Navbar mode={mode} toggleMode={toggleMode} />
         <main className="flex flex-1 overflow-hidden">
           <Aside mode={mode} />
+          <Section />
         </main>
       </div>
     </>
