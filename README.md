@@ -2,7 +2,7 @@
 
 # Textedit
 
-A text editor.
+The Ultimate Text Editing and Analysis Tool for Enhanced Productivity. Word count, character count, and reading time calculations at your fingertips. Stay on track with word limits effortlessly using Textedit. Try it today for a better text editing experience!
 
 ## Development tools
 
