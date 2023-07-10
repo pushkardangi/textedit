@@ -14,9 +14,9 @@ function Aside(props) {
   }
 
   return (
-    <aside className={`w-1/5 overflow-auto ${UI.textColor}`}>
+    <aside className={`w-1/5 py-2 overflow-auto ${UI.textColor}`}>
       {/* h-full kar sakte h niche vale div ki, scroll lane k liye */}
-      <div className={`mt-2 rounded-lg h-[40rem] ${UI.sectionColor} ${UI.border} ${UI.borderColor}`}>
+      <div className={`rounded-lg h-full ${UI.sectionColor} ${UI.border} ${UI.borderColor}`}>
         <div className={`p-3 border-b-2 text-lg ${props.mode == "light" ? "border-[#a5a4a4]" : UI.borderColor}`}>
           Features
         </div>
