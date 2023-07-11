@@ -6,7 +6,8 @@ const darkStyles = {
 
   textColor: "text-[#cecece]",
 
-  fnButtonColor: "bg-[#212123]",
+  fnBtnColor: "bg-[#212123]",
+  fnBtnHoverColor: "hover:bg-[#2f3234]",
 };
 
 const lightStyles = {
@@ -17,7 +18,8 @@ const lightStyles = {
 
   textColor: "text-black",
 
-  fnButtonColor: "bg-[#f7f7f7]",
+  fnBtnColor: "bg-[#f7f7f7]",
+  fnBtnHoverColor: "hover:bg-[#eeeeee]",
 };
 
 export { darkStyles, lightStyles };
