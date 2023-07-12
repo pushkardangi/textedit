@@ -6,6 +6,8 @@ import {
   lowercase,
   uppercase,
   removeExtraSpace,
+  copyText,
+  clearText,
   dragBtn,
 } from "../assets";
 
@@ -44,6 +46,16 @@ const features = [
     title: "Remove Extra Space",
     image: removeExtraSpace,
     function: ()=>{console.log("Remove Extra Space")}
+  },
+  {
+    title: "Copy Text",
+    image: copyText,
+    function: ()=>{console.log("Copy Text")}
+  },
+  {
+    title: "Clear Text",
+    image: clearText,
+    function: ()=>{console.log("Clear Text")}
   },
 ];
 

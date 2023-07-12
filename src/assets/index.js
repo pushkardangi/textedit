@@ -5,6 +5,8 @@ import sentenceCase from "./sentenceCase.png";
 import lowercase from "./lowercase.png";
 import uppercase from "./uppercase.png";
 import removeExtraSpace from "./removeExtraSpace.png";
+import copyText from "./copyText.png";
+import clearText from "./clearText.png";
 import dragBtn from "./dragBtn.png";
 
 export {
@@ -15,5 +17,7 @@ export {
   lowercase,
   uppercase,
   removeExtraSpace,
+  copyText,
+  clearText,
   dragBtn,
 };
