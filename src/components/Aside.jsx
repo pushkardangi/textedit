@@ -3,6 +3,7 @@ import { ThemeContext } from "../App";
 import { darkStyles, lightStyles } from "../constants/styles";
 
 import "../fonts/inter.css";
+import "../styles/scrollbar.css"
 import { features, dragBtn } from "../constants";
 
 function Aside() {
@@ -14,7 +15,7 @@ function Aside() {
 
   return (
     <aside className={`md:w-1/5 py-2 ${UI.textColor}`}>
-      <div className={`rounded-lg shadow-lg h-2/4 sm:h-full overflow-auto ${UI.sectionColor} ${UI.border} ${UI.borderColor}`}>
+      <div className={`rounded-lg shadow-lg h-2/4 sm:h-full overflow-auto hide-scrollbar ${UI.sectionColor} ${UI.border} ${UI.borderColor}`}>
         <div className={`p-3 border-b-2 text-lg hidden md:block ${theme == "light" ? "border-[#e5e7eb]" : UI.borderColor}`}>
           Features
         </div>

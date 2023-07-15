@@ -1,0 +1,11 @@
+/* hide scrollbar but keep the functionality */
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0rem;
+  background-color: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
