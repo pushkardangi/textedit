@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../App";
 import { darkStyles, lightStyles } from "../constants/styles";
+import FeatureButtons from "./FeatureButtons";
 
 import "../fonts/inter.css";
 import "../styles/scrollbar.css"
-import { features, dragBtn } from "../constants";
 
 function Aside() {
 
@@ -21,22 +21,7 @@ function Aside() {
         </div>
 
         <div className="mx-2 my-3">
-
-          {features.map((feature) => (
-            <div key={feature.title.replace(/\s/g, "_")}
-              className={`mb-2 p-2 flex items-center rounded w-full shadow-md ${UI.fnBtnColor} ${UI.fnBtnHoverColor}`}
-              onClick={() => feature.function()}
-            >
-              <div className="logo">
-                <img className="w-8 rounded" src={feature.image} alt={feature.title} />
-              </div>
-              <div className="mx-2 text-base hidden md:block">{feature.title}</div>
-              <div className="ml-auto hidden md:block">
-                <img className="w-2.5 mr-1" src={dragBtn} alt="drag-btn" />
-              </div>
-            </div>
-          ))}
-
+          <FeatureButtons />
         </div>
 
       </div>
