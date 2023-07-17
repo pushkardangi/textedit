@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../App";
-import { darkStyles, lightStyles } from "../constants/styles";
+import { useStyles } from "../context/ThemeContext";
 
 function Section() {
 
-  let UI;
-  const theme = useContext(ThemeContext);
-
-  { (theme === "dark") ? (UI = darkStyles) : (UI = lightStyles) }
+  const UI = useStyles();
 
   return (
     <section className="flex flex-col flex-1 px-4 md:px-20">

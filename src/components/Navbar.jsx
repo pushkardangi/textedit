@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../App";
-import { darkStyles, lightStyles } from "../constants/styles";
+import { useEffect } from "react";
+import { useTheme, useThemeUpdate, useStyles } from "../context/ThemeContext";
 
-function Navbar(props) {
+function Navbar({ getMode }) {
 
-  let UI;
-  const theme = useContext(ThemeContext);
+  const UI = useStyles();
+  const theme = useTheme();
+  const toggleMode = useThemeUpdate();
 
-  { (theme === "dark") ? (UI = darkStyles) : (UI = lightStyles) }
+  useEffect(() => {
+    getMode(theme);
+  }, [theme]);
 
   return (
     <nav className={`p-4 shadow-lg rounded-b-lg ${UI.textColor} ${UI.sectionColor} border-b-2 ${UI.borderColor}`}>
@@ -19,7 +21,7 @@ function Navbar(props) {
           <button
             type="button"
             className={`text-base font-semibold w-20 px-3 py-1 rounded border-2 ${theme === "light" ? "border-[#e5e7eb]" : UI.borderColor}`}
-            onClick={() => { props.toggleMode() }}
+            onClick={toggleMode}
           >
             {theme === "dark" ? "Dark" : "Light"}
           </button>

@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../App";
-import { darkStyles, lightStyles } from "../constants/styles";
+import { useStyles } from "../context/ThemeContext";
 
 import {
   undo,
@@ -17,10 +15,7 @@ import {
 
 function FeatureButtons() {
 
-  let UI;
-  const theme = useContext(ThemeContext);
-
-  { (theme === "dark") ? (UI = darkStyles) : (UI = lightStyles) }
+  const UI = useStyles();
 
   const features = [
     {

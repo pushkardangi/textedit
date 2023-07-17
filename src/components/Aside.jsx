@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../App";
-import { darkStyles, lightStyles } from "../constants/styles";
+import { useTheme, useStyles } from "../context/ThemeContext";
 import FeatureButtons from "./FeatureButtons";
 
 import "../fonts/inter.css";
@@ -8,10 +6,8 @@ import "../styles/scrollbar.css"
 
 function Aside() {
 
-  let UI;
-  const theme = useContext(ThemeContext);
-
-  { (theme === "dark") ? (UI = darkStyles) : (UI = lightStyles) }
+  const UI = useStyles();
+  const theme = useTheme();
 
   return (
     <aside className={`md:w-1/5 py-2 ${UI.textColor}`}>
