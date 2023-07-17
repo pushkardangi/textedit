@@ -2,17 +2,30 @@ import Navbar from "./components/Navbar";
 import Aside from "./components/Aside";
 import Section from "./components/Section";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const ThemeContext = React.createContext();
 
 function App() {
 
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("");
 
   const toggleMode = () => {
-    setMode(mode === "dark" ? "light" : "dark");
+    let newMode = mode === "dark" ? "light" : "dark";
+    setMode(newMode);
+    localStorage.setItem("mode", newMode);
   }
+
+  useEffect(() => {
+    const localMode = localStorage.getItem("mode");
+    if (localMode) {
+      setMode(localMode);
+    }
+    else {
+      setMode("dark");
+      localStorage.setItem("mode", "dark");
+    }
+  }, []);
 
   return (
     <>
