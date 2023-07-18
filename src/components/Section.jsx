@@ -1,8 +1,12 @@
 import { useStyles } from "../context/ThemeContext";
+import { useText, useTextUpdate } from "../context/TextContext";
 
 function Section() {
 
   const UI = useStyles();
+
+  const text = useText();
+  const textUpdate = useTextUpdate();
 
   return (
     <section className="flex flex-col flex-1 px-4 md:px-20">
@@ -17,7 +21,10 @@ function Section() {
       <div className="overflow-auto">
         <textarea id="textBox"
           className={`w-full p-4 h-[90rem] text-lg ${UI.textColor} ${UI.bgColor}`}
-          placeholder="Start typing or paste text here">
+          placeholder="Start typing or paste text here"
+          value={text}
+          onChange={(e) => { textUpdate(e.target.value) }}
+          >
         </textarea>
       </div>
     </section>
