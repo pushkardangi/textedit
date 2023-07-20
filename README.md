@@ -47,16 +47,21 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Attribution / Credits
+## Attribution
 
-1. [icons8](https://icons8.com/)
-2. [SVG repo](https://www.svgrepo.com/)
+1. [Icons8](https://icons8.com/)
+2. [SVG Repo](https://www.svgrepo.com/)
 
-#### Resources used
+### Resources used
 
-1. [Undo](https://www.svgrepo.com/svg/486890/undo)
-2. [Redo](https://www.svgrepo.com/svg/486811/redo)
-3. [Copy-Text](https://icons8.com/icons/set/copy-text)
-4. [Clear-Text](https://icons8.com/icons/set/delete)
+<details>
+  <summary>Images/Logos</summary>
+  <ol>
+    <li><a href="https://www.svgrepo.com/svg/486890/undo">Undo</a></li>
+    <li><a href="https://www.svgrepo.com/svg/486811/redo">Redo</a></li>
+    <li><a href="https://icons8.com/icons/set/copy-text">Copy text</a></li>
+    <li><a href="https://icons8.com/icons/set/delete">Clear text</a></li>
+  </ol>
+</details>
 
 <p align="right">[<a href="#readme-top">back to top</a>]</p>
