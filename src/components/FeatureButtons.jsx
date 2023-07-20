@@ -1,5 +1,5 @@
-import { useStyles } from "../context/ThemeContext";
-import { useText, useTextUpdate } from "../context/TextContext";
+import { useTheme } from "../context/ThemeContext";
+import { useText } from "../context/TextContext";
 
 import {
   undo,
@@ -16,10 +16,9 @@ import {
 
 function FeatureButtons() {
 
-  const UI = useStyles();
+  const { theme } = useTheme();
 
-  const text = useText();
-  const textUpdate = useTextUpdate();
+  const { text, textUpdate } = useText();
 
   const features = [
     {
@@ -62,7 +61,7 @@ function FeatureButtons() {
           newText += firstChar.toUpperCase() + restOfWord + "\n";
         }
 
-        textUpdate(newText);
+        textUpdate(newText.trim());
       },
     },
     {
@@ -111,7 +110,7 @@ function FeatureButtons() {
       image: removeExtraSpace,
       function: () => {
         // remove extra spaces
-        let newText = text.split(' ').filter(word => word).join(' ');
+        let newText = text.split(" ").filter(word => word).join(" ");
 
         // remove space between word and "." or "?" or "!" (sentence termination)
         newText = newText.replace(/\s\./g, ".");
@@ -142,7 +141,7 @@ function FeatureButtons() {
     <>
       {features.map((feature) => (
         <div key={feature.title.replace(/\s/g, "_")}
-          className={`mb-2 p-2 flex items-center rounded w-full shadow-md ${UI.fnBtnColor} ${UI.fnBtnHoverColor}`}
+          className={`mb-2 p-2 flex items-center rounded w-full shadow-md ${theme.fnBtnColor} ${theme.fnBtnHoverColor}`}
           onClick={() => feature.function()}
         >
           <div className="logo">
