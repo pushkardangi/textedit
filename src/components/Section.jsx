@@ -4,6 +4,7 @@ import { useText } from "../context/TextContext";
 function Section() {
 
   const { theme } = useTheme();
+  const { textColor, bgColor, fnBtnColor, border, borderColor } = theme;
 
   const { text, textUpdate } = useText();
 
@@ -13,18 +14,30 @@ function Section() {
   };
 
   return (
-    <section className="flex flex-col flex-1 px-4 md:px-20">
-      {/* Toolbar */}
-      <div className={`mt-2 mb-4 p-4 ${theme.sectionColor} ${theme.border} ${theme.borderColor} shadow-md rounded-lg`}>
-        <button className={`px-3 py-1 ${theme.textColor} ${theme.fnBtnColor} ${theme.fnBtnHoverColor} shadow rounded`}>
-          Coming Soon
-        </button>
+    <section className={`w-10/12 flex flex-col px-2 md:px-20 ${textColor}`}>
+      {/* Stats */}
+      <div className={`my-2 md:py-4 flex overflow-x-auto whitespace-nowrap`}>
+        <div>
+          <button className={`px-3 py-1.5 mr-2 shadow rounded-md ${fnBtnColor} ${border} ${borderColor}`}>
+            {text.length} Characters
+          </button>
+        </div>
+        <div>
+          <button className={`px-3 py-1.5 mr-2 shadow rounded-md ${fnBtnColor} ${border} ${borderColor}`}>
+            {text.split(' ').filter(word => word).length} Words
+          </button>
+        </div>
+        <div>
+          <button className={`px-3 py-1.5 shadow rounded-md ${fnBtnColor} ${border} ${borderColor}`}>
+            {((text.split(" ").filter((n) => { return n !== "" }).length) * 0.01).toFixed(1)} Minutes
+          </button>
+        </div>
       </div>
 
       {/* Textarea */}
       <div className="overflow-auto">
         <textarea id="textBox"
-          className={`w-full p-4 text-lg ${theme.textColor} ${theme.bgColor}`}
+          className={`w-full p-4 text-lg ${bgColor}`}
           placeholder="Start typing or paste text here"
           value={text}
           rows={getRowCount(text)}

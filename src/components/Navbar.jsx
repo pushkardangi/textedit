@@ -5,7 +5,7 @@ function Navbar() {
   const { mode, theme, toggleMode } = useTheme();
 
   return (
-    <nav className={`p-4 shadow-lg rounded-b-lg ${theme.textColor} ${theme.sectionColor} border-b-2 ${theme.borderColor}`}>
+    <nav className={`p-4 shadow-md rounded-b-lg ${theme.textColor} ${theme.sectionColor} border-b-2 ${theme.borderColor}`}>
       <div className="container mx-auto flex justify-between">
         <div className="flex items-center">
           <span className="text-xl font-medium">TextediT</span>
