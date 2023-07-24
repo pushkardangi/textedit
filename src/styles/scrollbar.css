@@ -2,6 +2,7 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   width: 0rem;
+  height: 0rem;
   background-color: transparent;
 }
 
