@@ -6,7 +6,7 @@ export default function Background({ children }) {
   const { mode } = useTheme();
 
   return (
-    <div className={`flex flex-col h-screen ${mode === "dark" ? "bg-[#0f0f0f]" : "bg-white"}`}>
+    <div className={`flex flex-col h-screen overflow-hidden ${mode === "dark" ? "bg-[#0f0f0f]" : "bg-white"}`}>
       {children}
     </div>
   )
